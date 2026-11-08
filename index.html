@@ -109,12 +109,12 @@
             </div>
             <div class="bg-slate-950/70 border border-slate-800/80 p-3 rounded-xl backdrop-blur-sm">
               <span class="text-[10px] font-mono text-emerald-400 font-bold block">MATERNIDADE & FORÇA</span>
-              <p class="text-[11px] text-slate-300 leading-snug mt-1">Mãe de dois (6 e 7, do mesmo homem), WOD pago no Crossfit e base de fé sólida.</p>
+              <p class="text-[11px] text-slate-300 leading-snug mt-1">Sou mãe, WOD pago no Crossfit e base de fé sólida.</p>
             </div>
           </div>
 
           <div class="bg-rose-500/10 border border-rose-500/20 p-2.5 rounded-xl text-center">
-            <p class="text-[11px] text-rose-300 font-mono">🚫 Aviso Editorial: HTTP 404 - Sexo Casual Não Encontrado</p>
+            <p class="text-xs text-amber-200 font-semibold">✨ Sem sexo casual e sem pressa para relacionamento: foco em conexão real, conversa boa e sintonia natural.</p>
           </div>
         </div>
 
@@ -150,7 +150,7 @@
             "Este portfólio em formato de revista não é arrogância: é economia de tempo para mim e para você. Quero que você saiba exatamente quem eu sou antes mesmo de mandar o primeiro 'oi'."
           </div>
           <p>
-            Sou mãe dedicada de dois meninos (6 e 7 anos, do mesmo homem), pratico Crossfit com consistência, valorizo conversas profundas, tenho uma base espiritual de fé e um humor que muitos consideram duvidoso. Se você busca sexo casual, este link já cumpriu a função de te dispensar com elegância. Se busca parceria real, seja bem-vindo às próximas páginas.
+            Sou mãe dedicada, pratico Crossfit com consistência, valorizo conversas inteligentes, tenho uma base espiritual de fé e um humor que muitos acham duvidoso. Não busco sexo casual, mas também estou sem pressa alguma para relacionamento: quero conhecer pessoas legais com calma, tomar um café gostoso, dar boas risadas e deixar a sintonia acontecer naturalmente, sem pressão nem cobrança. Se busca conexão de verdade e leveza, seja bem-vindo às próximas páginas.
           </p>
         </div>
 
@@ -249,9 +249,9 @@
             </div>
 
             <pre class="text-[11px] text-slate-300 overflow-x-auto"><code><span class="text-purple-400">if</span> match.intencao == <span class="text-rose-400">"casual"</span>:
-    <span class="text-purple-400">return</span> <span class="text-red-400">"404: Incompatível"</span>
-<span class="text-purple-400">elif</span> match.maduro <span class="text-purple-400">and</span> match.tem_fe <span class="text-purple-400">and</span> match.respeita_filhos:
-    <span class="text-purple-400">return</span> <span class="text-emerald-400">"200 OK: Café e boa conversa liberados! ☕"</span></code></pre>
+    <span class="text-purple-400">return</span> <span class="text-amber-400">"Incompatível: Buscamos coisas diferentes"</span>
+<span class="text-purple-400">elif</span> match.maduro <span class="text-purple-400">and</span> match.tem_fe <span class="text-purple-400">and</span> match.sem_pressa:
+    <span class="text-purple-400">return</span> <span class="text-emerald-400">"Sintonia Aprovada: Café sem pressa e boa conversa! ☕"</span></code></pre>
 
             <div id="mag-code-output" class="hidden text-[10px] text-amber-300 bg-slate-950 p-2 rounded-lg border border-slate-800">
               > [SISTEMA IA]: Candidato aprovado no filtro inicial de integridade e inteligência!
@@ -283,10 +283,10 @@
         <div id="mag-quiz-container" class="space-y-3.5 text-xs overflow-y-auto max-h-[360px] pr-1">
           <!-- Question 1 -->
           <div class="space-y-1.5 bg-slate-950/70 p-3 rounded-2xl border border-slate-800">
-            <p class="font-bold text-slate-200">1. Qual a sua postura em relação a uma mulher com filhos (6 e 7 anos)?</p>
+            <p class="font-bold text-slate-200">1. Qual a sua postura ao saber que sou mãe?</p>
             <div class="space-y-1">
               <button data-mq="1" data-val="25" class="mag-opt w-full text-left p-2 rounded-xl border border-slate-800 hover:border-slate-700 text-slate-300 text-[11px] transition-all">
-                A) Acho nobre, entendo as prioridades e busco uma mulher com bagagem e maturidade.
+                A) Acho lindo e admirável. Entendo as prioridades e busco uma mulher madura, amorosa e com caráter.
               </button>
               <button data-mq="1" data-val="0" class="mag-opt w-full text-left p-2 rounded-xl border border-slate-800 hover:border-slate-700 text-slate-300 text-[11px] transition-all">
                 B) Não curto crianças, quero alguém com agenda 100% livre.
@@ -312,7 +312,7 @@
             <p class="font-bold text-slate-200">3. Primeiro encontro ideal para você:</p>
             <div class="space-y-1">
               <button data-mq="3" data-val="25" class="mag-opt w-full text-left p-2 rounded-xl border border-slate-800 hover:border-slate-700 text-slate-300 text-[11px] transition-all">
-                A) Um café bem tirado ou uma mesa gostosa para conversar horas sem pressa.
+                A) Um bom café ou uma mesa gostosa para conversar sem pressa, sem cobrança e ver se há sintonia.
               </button>
               <button data-mq="3" data-val="0" class="mag-opt w-full text-left p-2 rounded-xl border border-slate-800 hover:border-slate-700 text-slate-300 text-[11px] transition-all">
                 B) "Brota aqui em casa às 23h."
@@ -550,7 +550,10 @@
     btnMagCalc.addEventListener('click', () => {
       const allSelected = Object.values(quizState).every(v => v !== null);
       if (!allSelected) {
-        showToast("Selecione uma resposta para cada pergunta!");
+        magScoreTxt.textContent = "Responda as 4 perguntas";
+        magScoreDesc.textContent = "Por favor, marque uma opção para cada uma das perguntas acima para ver seu resultado.";
+        magQuizRes.classList.remove('hidden');
+        showToast("Selecione uma opção em cada pergunta!");
         return;
       }
       const score = Object.values(quizState).reduce((a, b) => a + b, 0);
